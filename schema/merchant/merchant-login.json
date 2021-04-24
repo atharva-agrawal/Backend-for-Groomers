@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "/merchant-login",
+    "title": "merchant login",
+    "description": "This Schema describes merchant login fields",
+    "type": "object",
+    "properties": {
+        "phone_number": {
+            "type": "string",
+            "maxLength": 10,
+            "minLength": 10
+        },
+        "email_id": {
+            "type": "string",
+            "format": "email"
+        },
+        "password": {
+            "type": "string",
+            "pattern": "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$@#!%*?&]).{6,20}$"
+        }
+    },
+    "required": ["password"],
+    "anyOf": [{ "required": ["phone_number"] }, { "required": ["email_id"] }]
+}

@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "/merchant-login",
+    "title": "merchant login",
+    "description": "This Schema describes merchant login fields",
+    "type": "object",
+    "properties": {
+        "company_details": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "location": {
+                    "type": "object",
+                    "properties": {
+                        "latitude": {
+                            "type":"string"
+                        },
+                        "longitude": {
+                            "type":"string"
+                        }
+                    }
+                },
+                "phone_number": {
+                    "type": "string",
+                    "maxLength": 10,
+                    "minLength": 10
+                },
+                "address": {
+                    "type": "object",
+                    "properties": {
+                        "street1": {
+                            "type": "string"
+                        },
+                        "street2": {
+                            "type": "string"
+                        },
+                        "street3": {
+                            "type": "string"
+                        },
+                        "city": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string"
+                        },
+                        "district": {
+                            "type": "string"
+                        },
+                        "pin_code": {
+                            "type": "string"
+                        },
+                        "country": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["street1", "city", "state", "district", "pin_code", "country"]
+                },
+                "email_id": {
+                    "type": "string",
+                    "format": "email"
+                },
+                "description": {
+                    "type": "string"
+                }
+
+            },
+            "required": ["name", "location", "phone_number", "address", "email_id"]
+        }
+    }
+}

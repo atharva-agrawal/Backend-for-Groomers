@@ -1,0 +1,23 @@
+{
+  "id": "/login",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "user on login",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["password"],
+  "anyOf": [{ "required": ["phone_number"] }, { "required": ["email_id"] }],
+  "properties": {
+    "phone_number": {
+      "type": "string",
+      "maxLength": 10,
+      "minLength": 10
+    },
+    "email_id": {
+      "type": "string",
+      "format": "email"
+    },
+    "password": {
+      "type": "string"
+    }
+  }
+}

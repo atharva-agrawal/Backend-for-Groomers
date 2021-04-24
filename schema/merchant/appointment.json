@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "/appointment",
+    "title": "appointment",
+    "description": "This Schema describes appointment fields",
+    "type": "object",
+    "properties": {
+        "appointment_id" : {
+            "type": "string"
+        },
+        "name" : {
+            "type": "string"
+        },
+        "description" : {
+            "type": "string"
+        },
+        "appointment_date" : {
+            "type": "string"
+        },
+        "appointment_duration": {
+            "type": "string"
+        },
+        "start_time": {
+            "type": "string"
+        },
+        "end_time": {
+            "type": "string"
+        },
+        "status": {
+            "type": "boolean"
+        }
+    },
+    "required" : ["appointment_id", "name", "appointment_date", "appointment_duration", "start_time", "end_time", "status"]
+}

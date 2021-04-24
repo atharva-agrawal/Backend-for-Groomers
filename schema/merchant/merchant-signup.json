@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "/merchant-signup",
+    "title": "merchant-signup",
+    "description": "This Schema contains all the fields required to register Merchnat",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "phone_number": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 10
+        },
+        "email_id": {
+            "type": "string",
+            "format": "email"
+        },
+        "password": {
+            "type": "string",
+            "pattern": "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$@#!%*?&]).{6,20}$"
+        },
+        "dob": {
+            "description": "YYYY-MM-DD",
+            "type": "string",
+            "format": "date"
+        },
+        "is_active": {
+            "type": "boolean"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          }
+    },
+    "required": ["name", "phone_number", "email_id", "password", "dob", "address"]
+}

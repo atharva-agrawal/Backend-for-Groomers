@@ -1,0 +1,69 @@
+{
+  "id": "/signup",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "user on signup",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "phone_number", "dob", "email_id", "password"],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string",
+      "maxLength": 10,
+      "minLength": 10
+    },
+    "dob": {
+      "type": "string"
+    },
+    "email_id": {
+      "type": "string",
+      "format": "email"
+    },
+    "password": {
+      "type": "string",
+      "minLength": 6,
+      "pattern": "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$@#!%*?&]).{6,20}$"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+          "street1": {
+              "type": "string"
+          },
+          "street2": {
+              "type": "string"
+          },
+          "street3": {
+              "type": "string"
+          },
+          "city": {
+              "type": "string"
+          },
+          "state": {
+              "type": "string"
+          },
+          "district": {
+              "type": "string"
+          },
+          "pin_code": {
+              "type": "string"
+          },
+          "country": {
+              "type": "string"
+          }
+      },
+      "required": ["street1", "city", "state", "district", "pin_code", "country"]
+    },
+    "is_active": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

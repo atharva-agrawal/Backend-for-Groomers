@@ -1,0 +1,40 @@
+{
+  "name": "groomers",
+  "version": "1.0.0",
+  "description": "Appointment Booking Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon index",
+    "debug": "nodemon --inspect index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivangg66/Groomers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivangg66/Groomers/issues"
+  },
+  "homepage": "https://github.com/shivangg66/Groomers#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "gravatar": "^1.8.1",
+    "jsonschema": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.4",
+    "randomatic": "^3.1.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}
